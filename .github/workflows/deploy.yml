@@ -21,8 +21,8 @@ jobs:
 
     - name: Build and push Docker image
       run: |
-        docker build -t ${{ secrets.DOCKER_USERNAME | replace('@', '_') }}/ramspethouse:latest .
-        docker push ${{ secrets.DOCKER_USERNAME | replace('@', '_') }}/ramspethouse:latest
+        docker build -t ${{ secrets.DOCKER_USERNAME }}/ramspethouse:latest .
+        docker push ${{ secrets.DOCKER_USERNAME }}/ramspethouse:latest
 
   deploy:
     runs-on: ubuntu-latest
