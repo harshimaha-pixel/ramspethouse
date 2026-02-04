@@ -3,11 +3,11 @@ FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /app
 
 # Copy the project files
-COPY *.csproj ./
+COPY ramspethouse/*.csproj ./
 RUN dotnet restore
 
 # Copy the rest of the application files
-COPY . ./
+COPY ramspethouse/. ./
 RUN dotnet publish -c Release -o out
 
 # Use the runtime image to run the application
