@@ -22,8 +22,8 @@ jobs:
 
     - name: Build and push Docker image
       run: |
-        docker build -t harshimaha/ramspethouse:latest .
-        docker push harshimaha/ramspethouse:latest
+        docker build -t harshithaappasani/ramspethouse:latest .
+        docker push harshithaappasani/ramspethouse:latest
 
   deploy:
     runs-on: ubuntu-latest
